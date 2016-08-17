@@ -1,0 +1,4 @@
+*.pyc
+__pycache__
+orakanggo.py
+stones\static\stones

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+  <html>
+    <head>
+      <!--Let browser know website is optimized for mobile-->
+      <meta charset="utf‐8"/>
+      <meta http‐equiv="X‐UA‐Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      {% load staticfiles %}
+      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+      <title>Hebel Stone</title>
+    </head>
+
+    <body>
+      <!-- Section 1 of the web-->
+      <div class="intro grey lighten-1">
+          <div class="carousel carousel-slider center" data-indicators="true">
+            <a class="carousel-item" href="#Showroom"><img src="{% static 'images/show1.png' %}"></a>
+            <a class="carousel-item" href="#BatuBata"><img src="{% static 'images/show2.png' %}"></a>
+            <a class="carousel-item" href="#LiteStone"><img src="{% static 'images/show3.png' %}"></a>
+            <a class="carousel-item" href="#PurposeStone"><img src="{% static 'images/show4.png' %}"></a>
+            <a class="carousel-item" href="#PebbleStone"><img src="{% static 'images/show5.png' %}"></a>
+          </div>
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+      <script type="text/javascript">
+          // Initialize carousel
+          $(document).ready(function(){
+            $('.carousel').carousel();
+          });
+          // Next slide
+          $('.carousel').carousel('next');
+          $('.carousel').carousel('next', 3); // Move next n times.
+          // Previous slide
+          $('.carousel').carousel('prev');
+          $('.carousel').carousel('prev', 4); // Move prev n times.
+          // Set to nth slide
+          $('.carousel').carousel('set', 4);
+      </script>
+
+    </body>
+  </html>
