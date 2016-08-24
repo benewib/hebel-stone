@@ -114,13 +114,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'Asia/Jakarta'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
@@ -134,7 +130,7 @@ MEDIA_ROOT = '/images/'
 STATICFILES_DIRS = (
     # Put string here, like "/home/html/static" or "C:/www/django/static"
     # Always use forward slash, even on Windows
-    # Don't forget to use absotute path, not relative path
+    # Don't forget to use absolute path, not relative path
     os.path.join(
         os.path.dirname(__file__),
         'static',

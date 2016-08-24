@@ -1,7 +1,36 @@
 body, html
 {
-    background-color: #bdbdbd !important;
+      background-color: #bdbdbd !important;
 }
+
+.parallax
+{
+    position: static;
+}
+
+.nav-wrapper
+{
+    background-color: #64b5f6;
+}
+
+.brand-logo
+{
+  position: static;
+}
+
+  nav-mobile.pin-top {
+    position: relative;
+  }
+
+  nav-mobile.pin-bottom {
+    position: relative;
+  }
+
+
+  nav-mobile.pinned {
+    position: fixed !important;
+  }
+
 
 .intro
 {
@@ -17,12 +46,103 @@ body, html
     text-transform: uppercase;
 }
 
-.intro h5
+.intro h2
 {
     text-transform: uppercase;
-    background-color: #bdbdbd;
-    padding: 10px;
-    color: #ffffff;
-    display: inline;
-    font-size: 1.2rem;
+    color: #231F20;
 }
+
+.produk h5
+{
+    text-transform: uppercase;
+
+    color: #231F20;
+
+}
+
+.intro b
+{
+    font-weight: bold;
+}
+
+.produk h5
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.produk h6
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+.produk hr
+{
+    width: 40px;
+    margin-bottom: 45px;
+}
+
+.produk .produk-holder
+{
+    clear: both;
+    text-align: center;
+}
+
+.produk img
+{
+    width: 33%;
+    display: inline-block;
+    float: left;
+}
+
+
+.contact .col
+{
+    margin-bottom: 24px;
+}
+
+.contact h5
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.contact h6
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+.contact hr
+{
+    width: 40px;
+    margin-bottom: 45px;
+}
+
+.contact .contact-holder
+{
+    padding-left: 40px;
+    text-align: left;
+}
+
+.contact .contact-holder h6
+{
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact .contact-holder p
+{
+    margin-bottom: 30px;
+}
+
+footer
+{
+    padding-top: 0px;
+}
+.carousel .carousel-item {
+width:300px !important;}
