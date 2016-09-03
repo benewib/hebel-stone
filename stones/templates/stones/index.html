@@ -4,11 +4,11 @@
   <head>
     <!--Let browser know website is optimized for mobile-->
     <meta charset="utf‐8"/>
-    <meta http‐equiv="X‐UA‐Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http‐equiv="Content-Type" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet" type="text/css">
     <!--Import materialize.css-->
     <link rel="stylesheet"  href="{% static 'css/materialize.min.css' %}" media="screen, projection"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen, projection"/>
@@ -16,16 +16,79 @@
   </head>
 
   <body>
-    <!-- Parallax container-->
-    <div class="parallax-container">
-      <div class="parallax"><img class="responsive-img" img src="{% static 'images/show1.png' %}"/></div>
+    <div class="navbar-fixed">
+      <nav class="blue lighten-2" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo"><img src="{% static 'images/logo.png' %}"></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="1">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
     </div>
 
-    <!-- Profil Hebel Stone-->
-    <div class="section blue lighten-2">
-      <div class="row container">
-        <h2 href="#" class="brand-logo"><img class="responsive-img" src="{% static 'images/logo.png' %}"></h2>
-  <!--      <h6 href="#" class="brand-logo"><img class="responsive-img" src="{% static 'images/logo_kosong.png' %}"></h6>-->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Hebel Stone</h1>
+        <div class="row center">
+          <h5 class="header col l12 light">Desain variatif dan unik membuat produk kami tampil berbeda</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'images/show1.png' %}" alt="Showroom kami"></div>
+  </div>
+
+  <div class="container">
+      <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons md-36">flash_on</i></h2>
+              <h5 class="center">Desain Modern</h5>
+
+              <p class="light">Kami memadukan batu bata dan batu alam, sehingga produk kami sangat bervariasi dan unik.
+</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons md-36">border_style</i></h2>
+              <h5 class="center">Lebih Hemat</h5>
+
+              <p class="light">Dengan ukuran yang lebih besar dan ideal dibandingkan batu bata biasa,
+                produk kami lebih sedikit menggunakan semen, baik sebagai perekat atau plesteran.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons md-36">widgets</i></h2>
+              <h5 class="center">Fleksibel</h5>
+
+              <p class="light">Produk kami dapat di rekatkan menggunakan Nat ataupun tidak menggunakan Nat.
+                Hal ini tergantung permintaan konsumen</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <!--      <h6 href="#" class="brand-logo"><img class="responsive-img" src="{% static 'images/logo_kosong.png' %}"></h6>
             <p class="flow-text" class="grey-text text-darken-3 lighten-3">
                 Batu Bata merah merupakan salah satu komponen utama dalam pembuatan kontruksi bangunan.
                 Material ini biasanya digunakan untuk membuat dinding maupun komponen kontruksi bangunan lainnya.
@@ -64,7 +127,7 @@
                   Perbandingan ukuran yang lebih besar di bandingkan Batu Bata biasa menyebabkan perekat yang digunakan
                   lebih sedikit. Begitu juga dengan semen untuk plesteran yang digunakan pun bisa lebih dihemat
                   karena produk kami di buat dengan ukuran yang ideal untuk struktur dinding bangunan.<br></p>
-            </div>
+            </div>-->
 
     <div class="parallax-container">
         <div class="parallax"><img class="responsive-img" src="{% static 'images\collage.jpg' %}"></div>

@@ -1,6 +1,7 @@
 *.pyc
 __pycache__
 orakanggo.py
-stones\static\stones
-django-photologue-master
-parallax-template
+django-photologue-master/*
+parallax-template/*
+stones/static/stones/*
+stones/stones/*
