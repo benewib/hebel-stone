@@ -1,7 +1,7 @@
 {% extends 'stones/base.html'}
 
 {% block content %}
-  <h1>New Stones</h1>
+  <h1>Semua Produk</h1>
   <form method="POST" class="stone-form">{% csrf_token %}
     {{ form.as_p}}
     <button type="submit" class="waves-effect waves-light btn">Save</button>

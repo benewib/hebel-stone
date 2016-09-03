@@ -1,11 +1,17 @@
 from django.contrib import admin
 
 # Register your models here.
-from django.contrib import admin
-from .models import Kategori
-from .models import Stone
-from .models import carosel
+from .models import Kategori, Stone
 
-admin.site.register(Kategori)
-admin.site.register(Stone)
-admin.site.register(carosel)
+
+
+
+class KategoriAdmin(admin.ModelAdmin):
+    list_display = ('nama_kategori', 'deskripsi')
+
+class StoneAdmin(admin.ModelAdmin):
+    fields = ('kode', 'deskripsi', 'size','harga', 'cover_stone', 'depan', 'kategori')
+
+
+admin.site.register(Kategori, KategoriAdmin)
+admin.site.register(Stone, StoneAdmin)
