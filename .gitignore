@@ -1,6 +1,8 @@
 *.pyc
 __pycache__
 orakanggo.py
+desktop.ini
+images/*
 django-photologue-master/*
 parallax-template/*
 stones/static/stones/*
