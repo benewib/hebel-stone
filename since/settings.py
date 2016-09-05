@@ -127,15 +127,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Another location of static files
-STATICFILES_DIRS = (
-    # Put string here, like "/home/html/static" or "C:/www/django/static"
-    # Always use forward slash, even on Windows
-    # Don't forget to use absolute path, not relative path
-    os.path.join(
-        os.path.dirname(__file__),
-        'static',
-    ),
-)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
