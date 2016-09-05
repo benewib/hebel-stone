@@ -9,4 +9,4 @@ def index(request):
     return render(request, 'stones/index.html',{'prods' : prods})
 
 def detail(request):
-    return render(request, 'stones/produk.html', ())
+    return render(request, 'stones/produk.html',)
