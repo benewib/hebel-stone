@@ -20,9 +20,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    url(r'^stones/', include('stones.urls')),
+    url(r'^', include('stones.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 
-if settings.DEBUG is True:
+if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

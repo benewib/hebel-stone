@@ -1,7 +1,7 @@
 body, html
 {
       background-color: #bdbdbd !important;
-      font-family: Cuprum;
+      font-family: Work+Sans;
 
 }
 
@@ -61,9 +61,6 @@ p {
   font-size: inherit;
 }
 
-footer.page-footer {
-  margin: 0;
-}
 
 .intro
 {
@@ -88,7 +85,6 @@ footer.page-footer {
 .produk h5
 {
     text-transform: uppercase;
-
     color: #231F20;
 
 }
@@ -189,4 +185,5 @@ footer.page-footer {
 footer
 {
     padding-top: 0px;
+    margin: 0;
 }

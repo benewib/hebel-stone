@@ -5,4 +5,5 @@ app_name = 'stone'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^detail/$', views.detail, name='detail'),
 ]

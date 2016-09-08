@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
     <!--Import materialize.css-->
     <link rel="stylesheet"  href="{% static 'css/materialize.min.css' %}" media="screen, projection"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen, projection"/>
@@ -23,7 +23,6 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="#"></a></li>
           </ul>
-
           <ul id="nav-mobile" class="side-nav">
             <li><a href="1"></a></li>
           </ul>
@@ -40,7 +39,6 @@
         <div class="row center">
           <h5 class="header col l12 light">Desain variatif dan unik membuat produk kami tampil berbeda</h5>
         </div>
-
         <br><br>
       </div>
     </div>
@@ -49,16 +47,13 @@
 
   <div class="container">
       <div class="section">
-
-        <!--   Icon Section   -->
+<!--Icon Section   -->
         <div class="row">
           <div class="col s12 m4">
             <div class="icon-block">
               <h2 class="center brown-text"><i class="material-icons md-36">flash_on</i></h2>
               <h5 class="center">Desain Modern</h5>
-
-              <p class="light">Kami memadukan batu bata dan batu alam, sehingga produk kami sangat bervariasi dan unik.
-</p>
+              <p class="light">Kami memadukan batu bata dan batu alam, sehingga produk kami sangat bervariasi dan unik.</p>
             </div>
           </div>
 
@@ -66,7 +61,6 @@
             <div class="icon-block">
               <h2 class="center brown-text"><i class="material-icons md-36">border_style</i></h2>
               <h5 class="center">Lebih Hemat</h5>
-
               <p class="light">Dengan ukuran yang lebih besar dan ideal dibandingkan batu bata biasa,
                 produk kami lebih sedikit menggunakan semen, baik sebagai perekat atau plesteran.</p>
             </div>
@@ -76,73 +70,39 @@
             <div class="icon-block">
               <h2 class="center brown-text"><i class="material-icons md-36">widgets</i></h2>
               <h5 class="center">Fleksibel</h5>
-
               <p class="light">Produk kami dapat di rekatkan menggunakan Nat ataupun tidak menggunakan Nat.
                 Hal ini tergantung permintaan konsumen</p>
             </div>
           </div>
         </div>
-
       </div>
-
-    </div>
-  <!--      <h6 href="#" class="brand-logo"><img class="responsive-img" src="{% static 'images/logo_kosong.png' %}"></h6>
-            <p class="flow-text" class="grey-text text-darken-3 lighten-3">
-                Batu Bata merah merupakan salah satu komponen utama dalam pembuatan kontruksi bangunan.
-                Material ini biasanya digunakan untuk membuat dinding maupun komponen kontruksi bangunan lainnya.
-                Ditengah minimnya pilihan bahan pembuatan dinding, kami menghadirkan terobosan baru dengan perpaduan Batu Bata dengan batu alam.
-                Produk kami muncul dengan berbagai variasi serta bentuk yang unik, dan karena ukurannya lebih besar dari
-                Batu Bata biasa, maka produk kami lebih hemat dalam pemakaian semen, baik sebagai perekat maupun plesteran.
-                Keunggulan Produk kami:<br></p>
-
-            <div class="row">
-              <div class="col s12 m4 l4">
-                <div class="card-panel blue darken-1" class="z-depth-5">
-                  <h5>Ideal</h5>
-                  <p class="flow-text" class="grey-text text-darken-3 lighten-3">Berupa bahan Batu Bata yang telah melalui pemotongan sesuai ukuran yang ideal untuk struktur bangunan</p>
-                </div>
-              </div>
-
-              <div class="col s12 m4 l4">
-                <div class="card-panel blue darken-1" class="z-depth-5">
-                  <h5>Nat</h5>
-                  <p class="flow-text" class="grey-text text-darken-3 lighten-3">Batu Bata dengan lebar 20 cm yang disambung memakai perekat, tidak memakai nat.
-                     Akan tetapi bisa juga memakai nat, kami menyesuaikan sesuai permintaan konsumen</p>
-                </div>
-              </div>
-
-              <div class="col s12 m4 l4">
-                <div class="card-panel blue darken-1" class="z-depth-5">
-                  <h5>Hebel</h5>
-                  <p class="flow-text" class="grey-text text-darken-3 lighten-3">
-                    Batu Bata memakai hebel sebagai bahan dasar dengan ukuran 20 x 60 x 10<br></p>
-                </div>
-              </div>
-          </div>
+  </div>
 
 
-                <p class="flow-text" class="grey-text text-darken-3 lighten-3">
-                  Perbandingan ukuran yang lebih besar di bandingkan Batu Bata biasa menyebabkan perekat yang digunakan
-                  lebih sedikit. Begitu juga dengan semen untuk plesteran yang digunakan pun bisa lebih dihemat
-                  karena produk kami di buat dengan ukuran yang ideal untuk struktur dinding bangunan.<br></p>
-            </div>-->
+  <div class="parallax-container">
+    <div class="parallax"><img class="responsive-img" src="{% static 'images\collage.jpg' %}"></div>
+  </div>
 
-    <div class="parallax-container">
-        <div class="parallax"><img class="responsive-img" src="{% static 'images\collage.jpg' %}"></div>
-    </div>
-
-    <!-- Produk container -->
+  <!-- Produk container -->
     <div class="container produk">
       <h5 class="produk">produk</h5>
       <h6 class="produk">ragam produk hebel stone</h6>
       <hr>
       <div class="row">
-          <div class="col s12 m12 l12 portfolio-holder">
-            {% for Stone in prods %}
-              <img class="materialboxed" data-caption="sand stone" src="{% static 'images/project.png' %}">
+          <div class="col s12 m6 l4 portfolio-holder">
+            {% for prod in prods %}
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" data-caption="{{ prod.kategori }}" src="{{ prod.cover_stone.url }}">
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">{{ prod.kode }}<i class="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+              </div>
             {% endfor %}
           </div>
-        </div>
+      </div>
     </div>
 
     <div class="container contact">
@@ -154,13 +114,9 @@
             <div class="row">
               <form class="col s12">
                 <div class="row">
-                  <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
+                  <div class="input-field col s12">
+                    <input id="nama" type="text" class="validate">
+                    <label for="nama">Nama</label>
                   </div>
                 </div>
                 <div class="row">
@@ -187,10 +143,6 @@
           </div>
         </div>
       </div>
-      <h1>{% for Stone in kabeh %}
-                {{ Stone.cover_stone }} <br>
-              {% endfor %}
-      </h1>
 
       <footer>
         <div class="footer-copyright">
@@ -210,22 +162,11 @@
               $('.parallax').parallax();
           });
 
-          $(document).ready(function(){
-              $('.parallax').parallax();
-          });
-
-          // Initialize pushpin navbar
-          $(document).ready(function(){
-              $('.nav-mobile').pushpin({ top: $('.nav-mobile').offset().top });
-          });
-
           // Initialize materialbox
           $(document).ready(function(){
               $('.materialboxed').materialbox();
           });
-          $(document).ready(function(){
-              $('.materialboxed').materialbox();
-          });
+
       </script>
   </body>
 </html>

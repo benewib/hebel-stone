@@ -1,0 +1,15 @@
+{% extends 'stones/base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="container produk">
+  <h5 class="semua">produk</h5>
+  <h6 class="semua">produk hebel stone</h6>
+  <hr>
+  <div class="row">
+    <div class="col s12 m12 l12 portfolio-holder">
+      {% for semua in semuas %}
+        <img class="materialboxed" data-caption="{{ semua.kategori }}" src="{{ semua.cover_stone.url }}">
+      {% endfor %}
+    </div>
+{% endblock %}
