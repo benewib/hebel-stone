@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet" type="text/css">
+
     <!--Import materialize.css-->
     <link rel="stylesheet"  href="{% static 'css/materialize.min.css' %}" media="screen, projection"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen, projection"/>
@@ -91,13 +92,16 @@
       <div class="row">
           <div class="col s12 m6 l4 portfolio-holder">
             {% for prod in prods %}
-              <div class="card">
+              <div class="card small">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" data-caption="{{ prod.kategori }}" src="{{ prod.cover_stone.url }}">
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">{{ prod.kode }}<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  <span class="card-title grey-text text-darken-4 center">{{ prod.kode }}<i class="material-icons right">close</i></span>
+                  <p>                 <img src="{{ prod.cover_stone.url }}"> <br>
+                     Deskripsi: {{ prod.deskripsi }} <br>
+                     Ukuran   : {{ prod.size }} <br>
+                     Harga    : {{ prod.harga }}</p>
                 </div>
               </div>
             {% endfor %}
@@ -160,6 +164,10 @@
           // Initialize parallax
           $(document).ready(function(){
               $('.parallax').parallax();
+          });
+          // Initialize pushpin navbar
+          $(document).ready(function(){
+              $('.nav-mobile').pushpin({ top: $('.nav-mobile').offset().top });
           });
 
           // Initialize materialbox

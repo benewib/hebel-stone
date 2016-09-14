@@ -12,4 +12,9 @@
         <img class="materialboxed" data-caption="{{ semua.kategori }}" src="{{ semua.cover_stone.url }}">
       {% endfor %}
     </div>
+    <div class="col s12 m12 l12 portfolio-holder">
+      {% for semua in semuas %}
+        <img class="materialboxed" data-caption="{{ semua.kategori }}" src="{% static 'images/project2.png' %}">
+      {% endfor %}
+    </div>
 {% endblock %}

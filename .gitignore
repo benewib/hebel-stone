@@ -1,5 +1,6 @@
 *.pyc
 __pycache__
+postgres.sql
 orakanggo.py
 desktop.ini
 images/*
