@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Stone
+from .models import Stone, Kategori
 
 
 

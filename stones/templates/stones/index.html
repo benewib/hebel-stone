@@ -20,7 +20,7 @@
     <div class="navbar-fixed">
       <nav class="blue lighten-2" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo"><img src="{% static 'images/logo.png' %}"></a>
+          <a id="logo-container" href="#" class="brand-logo"><img src="{% static 'images/logo.jpg' %}"></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#"></a></li>
           </ul>
@@ -43,7 +43,7 @@
         <br><br>
       </div>
     </div>
-    <div class="parallax"><img src="{% static 'images/show1.png' %}" alt="Showroom kami"></div>
+    <div class="parallax"><img src="{% static 'images/show1.jpg' %}" alt="Showroom kami"></div>
   </div>
 
   <div class="container">
@@ -89,23 +89,15 @@
       <h5 class="produk">produk</h5>
       <h6 class="produk">ragam produk hebel stone</h6>
       <hr>
-      <div class="row">
-          <div class="col s12 m6 l4 portfolio-holder">
-            {% for prod in prods %}
-              <div class="card small">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" data-caption="{{ prod.kategori }}" src="{{ prod.cover_stone.url }}">
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4 center">{{ prod.kode }}<i class="material-icons right">close</i></span>
-                  <p>                 <img src="{{ prod.cover_stone.url }}"> <br>
-                     Deskripsi: {{ prod.deskripsi }} <br>
-                     Ukuran   : {{ prod.size }} <br>
-                     Harga    : {{ prod.harga }}</p>
-                </div>
-              </div>
-            {% endfor %}
-          </div>
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="carousel">
+               <a class="carousel-item materialboxed" href="#Showroom"><img src="{% static 'images/view1.jpg' %}"></a>
+               <a class="carousel-item materialboxed" href="#BatuBata"><img src="{% static 'images/view2.jpg' %}"></a>
+               <a class="carousel-item materialboxed" href="#LiteStone"><img src="{% static 'images/view3.jpg' %}"></a>
+               <a class="carousel-item materialboxed" href="#PurposeStone"><img src="{% static 'images/view4.jpg' %}"></a>
+               <a class="carousel-item materialboxed" href="#PebbleStone"><img src="{% static 'images/view5.jpg' %}"></a>
+        </div>
+        <div class="divider mt18"></div>
       </div>
     </div>
 
@@ -161,19 +153,20 @@
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="{% static 'js/materialize.min.js' %}"></script>
       <script>
-          // Initialize parallax
+          // Initialize parallax, pushpin, materialbox
           $(document).ready(function(){
               $('.parallax').parallax();
-          });
-          // Initialize pushpin navbar
-          $(document).ready(function(){
               $('.nav-mobile').pushpin({ top: $('.nav-mobile').offset().top });
+              $('.carousel').carousel();
+                  autoplay()
+                  function autoplay() {
+                      $('.carousel').carousel('next');
+                      setTimeout(autoplay, 4500);
+                    }
           });
 
-          // Initialize materialbox
-          $(document).ready(function(){
-              $('.materialboxed').materialbox();
-          });
+
+
 
       </script>
   </body>
