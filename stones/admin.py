@@ -7,7 +7,7 @@ from .models import Kategori, Stone
 
 
 class KategoriAdmin(admin.ModelAdmin):
-    list_display = ('nama_kategori', 'deskripsi')
+    list_display = ('name',)
 
 class StoneAdmin(admin.ModelAdmin):
     fields = ('kode', 'deskripsi', 'size','harga', 'cover_stone', 'depan', 'kategori')

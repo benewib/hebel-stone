@@ -2,6 +2,7 @@
 __pycache__
 postgres.sql
 orakanggo.py
+orakanggo.html
 desktop.ini
 images/*
 django-photologue-master/*
