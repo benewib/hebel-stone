@@ -1,13 +1,27 @@
+// Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Libre+Franklin:400,700|Open+Sans);
 body, html
 {
       background-color: #bdbdbd !important;
-      font-family: 'Libre Franklin';
-
-}
-
-.parallax
-{
-    position: static;
 }
 
 .nav-wrapper
@@ -34,15 +48,17 @@ p {
   color: #26a69a;
 }
 
+.parallax
+{
+    position: static;
+}
 
-.parallax-container .section {
-    width: 100%;
-  }
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
+    width: 100%
   }
   #index-banner .section {
     top: 10%;
@@ -63,45 +79,6 @@ p {
 }
 
 
-
-.intro
-{
-    text-align: center;
-    padding-top: 13%;
-    padding-bottom: 13%;
-    margin-bottom: 50px;
-}
-
-.intro h1
-{
-    font-weight: 1200;
-    text-transform: uppercase;
-}
-
-.intro h2
-{
-    text-transform: uppercase;
-    color: #231F20;
-}
-
-
-.intro b
-{
-    font-weight: bold;
-}
-
-.card-panel h5
-{
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.card-panel p
-{
-    font-size: 24;
-}
-
 .produk h5
 {
     text-transform: uppercase;
@@ -121,6 +98,27 @@ p {
     text-align: center;
     width: 40px;
     margin-bottom: 45px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  width: 400px;
+  margin: 10px auto;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+}
+
+.card-header {
+  overflow: hidden;
+  width: 100%;
+  max-height: 200px;
+}
+
+.card-header img{
+  width: 100%;
+}
+
+.card-reveal img{
+  width: 350px;
 }
 
 .slider .slider-item {width:300px !important;}
