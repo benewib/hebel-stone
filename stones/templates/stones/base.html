@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet" type="text/css">
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen, projection"/>
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
     <title>Hebel Stone</title>
     <!-- Navbar fixed-->
@@ -35,12 +36,19 @@
     {% endblock %}
 
     <!--Import jQuery before materialize.js-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="{% static 'js/materialize.min.js' %}"></script>
-    <script>
-      $(document).ready(function(){
-        $('.materialboxed').materialbox();
-      });
+    <script src="{% static 'js/lightbox-plus-jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+
+      <script>
+          // Initialize parallax, pushpin
+          $(document).ready(function(){
+              $('.nav-mobile').pushpin({ top: $('.nav-mobile').offset().top });
+          });
+
+          lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+          })
     </script>
 
   </body>

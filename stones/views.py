@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Stone, Kategori
-import uuid
 
 
 
@@ -13,5 +12,3 @@ def index(request):
 def detail(request):
     semuas = Stone.objects.all()
     return render(request, 'stones/detail.html', {'semuas' : semuas})
-
-    

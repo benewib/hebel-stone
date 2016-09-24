@@ -6,20 +6,14 @@
   <h5 class="semua">produk</h5>
   <h6 class="semua">produk hebel stone</h6>
   <hr>
-  <div class="row">
-    <div class="col s12 m12 l12 card-container">
+    <div class="image-row">
       {% for semua in semuas %}
-      <div class="card">
-        <div class="card-image">
-          <img data-caption="{{ semua.kategori }}" src="{{ semua.cover_stone.url }}">
-          <span class="card-title">{{semua.kode}}</span>
-        </div>
-        <div class="card-content">
-             Deskripsi: {{ semua.deskripsi }} <br>
-             Ukuran   : {{ semua.size }} <br>
-             Harga    : {{ semua.harga }}</p>
-        </div>
+      <div class="image-set">
+        <a class="image-link" href="{{ semua.image.url }}" data-lightbox="sama" data-title="{{ semua.kode }}">
+          <img src="{{ semua.thumbnail.url }}"/></a>
       </div>
-    {% endfor %}
+      {% endfor %}
     </div>
+</div>
+
 {% endblock %}
