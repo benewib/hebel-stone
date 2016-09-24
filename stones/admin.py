@@ -22,7 +22,7 @@ class StoneAdmin(admin.ModelAdmin):
             return
 
         # Set our max thumbnail size in a tuple (max width, max height)
-        THUMBNAIL_SIZE = (256,75)
+        THUMBNAIL_SIZE = (200,75)
 
         DJANGO_TYPE = obj.image.file.content_type
 
