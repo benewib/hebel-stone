@@ -10,5 +10,6 @@ def index(request):
 
 
 def detail(request):
-    semuas = Stone.objects.all()
+    kates = Kategori.objects.all()
+    semuas = Stone.objects.all(order)
     return render(request, 'stones/detail.html', {'semuas' : semuas})
