@@ -1,19 +1,22 @@
 {% extends 'stones/base.html' %}
 
 {% block content %}
-{% load staticfiles %}
-<div class="container produk">
-  <h5 class="semua">produk</h5>
-  <h6 class="semua">produk hebel stone</h6>
-  <hr>
+  {% load staticfiles %}
+  <div class="container produk">
+    <h5>produk</h5>
+    <h6>produk hebel stone</h6>
+    <hr class="produk">
     <div class="image-row">
-      {% for semua in semuas %}
-      <div class="image-set">
-        <a class="image-link" href="{{ semua.image.url }}" data-lightbox="sama" data-title="{{ semua.kode }}">
-          <img src="{{ semua.thumbnail.url }}"/></a>
-      </div>
+      {% for kate in kates %}
+          <div class="col s4 m8 l12">
+              <h6 class="kat">{{ kate.name }}</h6>
+              <hr class="kat">
+                  {% for semua in semuas %}
+                      <a class="image-link" href="{{ semua.image.url }}" data-lightbox="sama" data-title="{{ semua.kode }}">
+                        <img src="{{ semua.thumbnail.url }}" width="200" height="75"/></a>
+                  {% endfor %}
+          </div>
       {% endfor %}
     </div>
-</div>
-
+  </div>
 {% endblock %}
