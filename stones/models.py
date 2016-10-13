@@ -19,7 +19,6 @@ def get_thumb_path(instance, filename):
 
 class Kategori(models.Model):
     name = models.CharField(max_length=30)
-
     def __str__(self):
         return self.name
 

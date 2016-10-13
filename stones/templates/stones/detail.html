@@ -2,21 +2,37 @@
 
 {% block content %}
   {% load staticfiles %}
+
+
   <div class="container produk">
     <h5>produk</h5>
     <h6>produk hebel stone</h6>
+    {% regroup stones_list by kategori as kategori_list %}
+
     <hr class="produk">
     <div class="image-row">
-      {% for kate in kates %}
+
+
+      {% for kate in kategori_list %}
           <div class="col s4 m8 l12">
-              <h6 class="kat">{{ kate.name }}</h6>
+              <h6></h6>
+              <h6 class="kat">{{ kate.grouper }}</h6>
               <hr class="kat">
-                  {% for semua in semuas %}
-                      <a class="image-link" href="{{ semua.image.url }}" data-lightbox="sama" data-title="{{ semua.kode }}">
-                        <img src="{{ semua.thumbnail.url }}" width="200" height="75"/></a>
+                  {% for item in kate.list %}
+                      <a class="image-link" href="{{ item.image.url }}" data-lightbox={{ kate.grouper }} data-title="{{ item.kode }}">
+                        <img src="{{ item.thumbnail.url }}" width="200" height="75"/></a>
                   {% endfor %}
           </div>
       {% endfor %}
     </div>
   </div>
+  <footer>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2016 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">Link</a>
+      </div>
+    </div>
+  </footer>
+
 {% endblock %}

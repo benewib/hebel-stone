@@ -6,7 +6,7 @@ from .models import Kategori, Stone
 from django.contrib import admin
 
 class StoneAdmin(admin.ModelAdmin):
-    list_display = ("kode", "deskripsi", "size", "harga", "image", "depan", "kategori",)
+    list_display = ['kode', 'deskripsi', 'size', 'harga', 'image', 'depan', 'kategori']
 
     def save_model(self, request, obj, form, change):
         tf = self.create_thumbnail(obj)

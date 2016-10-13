@@ -86,16 +86,24 @@ p {
 .kat h6
 {
   text-align: left;
+  margin-bottom: 20px
 }
 
 .kat hr
 {
   text-align: left;
+  margin-bottom: inherit;;
+}
+
+.kat img
+{
+  border: 1px solid black;
+
 }
 
 .image-row
 {
-  width: 90%;
+  width: 100%;
 }
 
 .card {
